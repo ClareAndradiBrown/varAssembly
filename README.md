@@ -11,9 +11,12 @@ This is executed using several multilanguage scripts and third party tools. Befo
 This pipeline assumes you have all required data files (reads, human genome, Pf 3D7 genome (with var excluded), varDB of exon 1 (> 3kb), HMM of var domains).
 
 # Dependencies
-Most requirements can be installed using Anaconda. Please ensure all are installed before running the pipeline.
+Most requirements can be installed using Anaconda. Please ensure all are installed before running the pipeline.<br />
+Linux OS is preferable. <br />
+python 3.1 or later versions required <br />
+<br /> Python packages required: NumPy and Pandas<br />
 
-To install, run the following commands:
+To install dependencies, run the following commands:
 
 conda install -c anaconda python <br />
 conda install -c bioconda subread <br />
