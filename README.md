@@ -14,7 +14,7 @@ This pipeline assumes you have all required data files (reads, human genome, Pf 
 Most requirements can be installed using Anaconda. Please ensure all are installed before running the pipeline.<br />
 Linux OS is preferable. <br />
 python 3.1 or later versions required <br />
-<br /> Python packages required: NumPy and Pandas<br />
+<br /> python packages required: NumPy and Pandas<br />
 
 To install dependencies, run the following commands:
 
