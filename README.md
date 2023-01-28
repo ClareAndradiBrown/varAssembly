@@ -10,7 +10,7 @@ This is executed using several multilanguage scripts and third party tools. Befo
 # Data 
 This pipeline assumes you have all required data files (reads, human genome, Pf 3D7 genome (with var excluded), varDB of exon 1 (> 3kb), HMM of var domains).
 
-# Installation requirments 
+# Dependencies
 Most requirements can be installed using Anaconda. Please ensure all are installed before running the pipeline.
 
 To install, run the following commands:
