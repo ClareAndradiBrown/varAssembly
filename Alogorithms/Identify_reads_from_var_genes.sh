@@ -24,6 +24,7 @@ seqtk subseq "$file_name"_2.fq "$file_name"_unmapped_reads.txt > "$file_name"_hu
 done
 
 #Map the human unmapped reads to Pf 3D7 and identify any unmapped reads
+mkdir plasmodium_3d7_mapped_novar
 for file in *_human_unmapped_1.fq
 do
 file_name=$(echo "$number_name" | cut -d"_" -f1)
@@ -36,6 +37,7 @@ samtools view -f 4 plasmodium_3d7_mapped_novar/"$file_name"_mapped.bam  | cut -f
 done
 
 #Map the human unmapped reads to var3kb exon 1 and identify any mapped reads
+mkdir var3kb_exon1
 for file in *_human_unmapped_1.fq
 do
 file_name=$(echo "$number_name" | cut -d"_" -f1)
