@@ -62,7 +62,7 @@ Assuming the polymorphic reads are in the current directory, run the following c
 
 *_SPAdes71_SSPACE represent the unfiltered assembled transcripts <br />
 
-**3. Annotating the var transcripts**<br /> This step annotates the assembled transcripts with domain annotations defined in Rask et al., 2010. It currently filters for transcripts >= 1500nt in length and containing at least 3 significantly annotated var domains<br />
+**3. Annotating the var transcripts**<br /> This step annotates the assembled transcripts with domain annotations defined in Rask et al., 2010. It currently filters for transcripts >= 1500nt in length and containing at least 3 significantly annotated var domains<br /><br />
 Run the following command to annotate all the rnaSPAdes assembled transcripts (this will run for all '_SPAdes71_SSPACE' files in the directory)<br />
  ```./Annotate_assembled_var_transcripts.sh ```<br />
 - *assembled_id_and_var_annotation.csv is a csv file with the assembled sequence ID and the corresponding var domain annotation<br />
