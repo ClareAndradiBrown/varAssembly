@@ -1,4 +1,4 @@
-def process_hmm_annotations(df):
+def process_hmm_annotations(df,sample):
     df=pd.read_csv(df,sep=' ')
     df = df.iloc[1: , :]
     transcript_dict={}
@@ -51,5 +51,10 @@ def process_hmm_annotations(df):
     sig_id_ann=pd.DataFrame()
     sig_id_ann['Assembled_id']=sig_ids
     sig_id_ann['Annotation']=sig_ann
-    sig_id_ann.to_csv('assembled_id_to_annotation.csv')
+    file_name=str(sample)+' assembled_id_and_var_annotation.csv'
+    sig_id_ann.to_csv(file_name)
+    
+    sig_id_only=pd.DataFrame()
+    sig_id_only['Assembled_id']=sig_ids
+    sig_id_ann.to_csv('assembled_id_sig_annotation.txt')
     return transcript_dict
