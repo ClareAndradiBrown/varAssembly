@@ -34,6 +34,8 @@ For SSPACE, please download the source code at:https://github.com/nsoranzo/sspac
 
 # Notes on the code:
 The pipeline is run in three steps:<br />
+<br />
+
 **1. Identifying reads derived from polymorphic genes: This step removes any reads mapping to human and P.falciparum core (non-polymorphic) genes**<br />
   <br />
 
