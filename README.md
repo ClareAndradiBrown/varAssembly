@@ -56,4 +56,5 @@ This is run in several steps: <br />
 *_SPAdes71_SSPACE represent the unfiltered assembled transcripts <br />
 
 **3. Annotating the var transcripts**<br /> This step annotates the assembled transcripts with domain annotations defined in Rask et al., 2010. It currently filters for transcripts >= 1500nt in length and containing at least 3 significantly annotated var domains<br />
-This return a python dictionary of the assembled sequence ID and the corresponding var domain annotation
+- *assembled_id_and_var_annotation.csv is a csv file with the assembled sequence ID and the corresponding var domain annotation<br />
+- *_sig_var_transcripts.fasta is a fasta file of the sequences of the significantly annotated var transcripts 
