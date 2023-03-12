@@ -43,5 +43,11 @@ The output of this step are several fq files:
 -  var3kb_exon1/*_read_mapped_ids.txt contains the read ids that map to var3kb  <br />
   
 *_polymorphic_reads_1.fq are the fq files of the identified polymorphic (non-core) reads, from which var assembly can be performed <br />
-**2. Assembling the var transcripts: This step runs rnaSPAdes (k-71) followed by SSPACE to assemble var transcripts** <br />
+**2. Assembling the var transcripts:**
+This us run in several steps: <br />
+- rnaSPAdes (k-71) <br />
+- bbmap to estimate insert sizes for SSPACE <br />
+- SSPACE  <br />
+*_SPAdes71_SSPACE represent the unfiltered assembled transcripts <br />
+
 **3. Annotating the var transcripts: This step annotates the assembled transcripts with domain annotations defined in Rask et al., 2010. It currently filters for transcripts >= 1500nt in length and containing at least 3 significantly annotated var domains**<br />
