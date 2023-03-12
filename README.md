@@ -55,4 +55,4 @@ This is run in several steps: <br />
 
 *_SPAdes71_SSPACE represent the unfiltered assembled transcripts <br />
 
-**3. Annotating the var transcripts**<br /> This step annotates the assembled transcripts with domain annotations defined in Rask et al., 2010. It currently filters for transcripts >= 1500nt in length and containing at least 3 significantly annotated var domains**<br />
+**3. Annotating the var transcripts**<br /> This step annotates the assembled transcripts with domain annotations defined in Rask et al., 2010. It currently filters for transcripts >= 1500nt in length and containing at least 3 significantly annotated var domains<br />
