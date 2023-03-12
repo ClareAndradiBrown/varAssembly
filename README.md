@@ -42,7 +42,7 @@ The pipeline is run in three steps:<br />
   ```./Identify_reads_from_var_genes.sh ```<br />
   This will identify reads derived from polymorphic genes for all paired fq files in the current directory <br />
   
-The output of this step are several fq files:
+The output of this step are several fq files for each set of paired end reads:
 - *_human_unmapped_1.fq is a fq contaning all the reads that were not mapped to the human genome <br />
 -  plasmodium_3d7_mapped_novar/*_Pf_unmapped_reads.txt is a txt file containing the read ids that are unmapped to the Pf genome (with var removed) <br />
 -  var3kb_exon1/*_read_mapped_ids.txt contains the read ids that map to var3kb  <br />
