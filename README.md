@@ -17,7 +17,7 @@ python 3.1 or later versions required <br />
 <br /> python packages required: NumPy and Pandas<br />
 
 To install dependencies, run the following commands:
-
+```
 conda install -c anaconda python <br />
 conda install -c bioconda subread <br />
 conda install -c bioconda seqtk <br />
@@ -28,7 +28,7 @@ conda install -c bioconda bbmap <br />
 conda install -c bioconda hmmer <br />
 conda install -c bioconda cath-tools <br />
 
-
+```
 For SSPACE, please download the source code at:https://github.com/nsoranzo/sspace_basic
 
 
