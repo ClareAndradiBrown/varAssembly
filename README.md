@@ -18,15 +18,15 @@ python 3.1 or later versions required <br />
 
 To install dependencies, run the following commands:
 ```
-conda install -c anaconda python <br />
-conda install -c bioconda subread <br />
-conda install -c bioconda seqtk <br />
-conda install -c bioconda samtools <br />
-conda install -c bioconda blobtools <br />
-conda install -c bioconda spades <br />
-conda install -c bioconda bbmap <br />
-conda install -c bioconda hmmer <br />
-conda install -c bioconda cath-tools <br />
+conda install -c anaconda python
+conda install -c bioconda subread 
+conda install -c bioconda seqtk
+conda install -c bioconda samtools 
+conda install -c bioconda blobtools 
+conda install -c bioconda spades 
+conda install -c bioconda bbmap 
+conda install -c bioconda hmmer 
+conda install -c bioconda cath-tools 
 
 ```
 For SSPACE, please download the source code at:https://github.com/nsoranzo/sspace_basic
@@ -55,6 +55,10 @@ This is run in several steps: <br />
 - rnaSPAdes (k-71) <br />
 - bbmap to estimate insert sizes for SSPACE <br />
 - SSPACE  <br />
+
+Assuming the polymorphic reads are in the current directory, run the following command:<br />
+ ```./var_assembly.sh ```<br />
+ This will perform var de novo assembly for all *_polymorphic_reads* paired end fq files in the directory <br />
 
 *_SPAdes71_SSPACE represent the unfiltered assembled transcripts <br />
 
