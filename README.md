@@ -5,7 +5,7 @@ Main pipeline takes paired-end RNA-seq (fq or fa) and performs var gene assembly
 
 The output will be assembled var transcripts and their corresponding domain annotation 
 
-This is executed using several multilanguage scripts and third party tools. Before you start, please ensure you have Python, Subread align, seqtk, samtools, blobtools, SPAdes, BBMap, SSPACE, HMMER and Cath Tools installed (installation instructions below).
+This is executed using several multilanguage scripts and third party tools. Before you start, please ensure you have Python, Subread align, seqtk, samtools, blobtools, rnaSPAdes, BBMap, SSPACE, HMMER and Cath Tools installed (installation instructions below).
 
 # Data 
 This pipeline assumes you have all required data files (reads, human genome, Pf 3D7 genome (with var excluded), varDB of exon 1 (> 3kb), HMM of var domains).
