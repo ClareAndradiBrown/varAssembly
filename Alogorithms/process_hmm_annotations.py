@@ -46,5 +46,10 @@ def process_hmm_annotations(df):
 
 
                 transcript_dict[scaffold]=transcript
-
+    sig_ids=transcript_dict.keys()
+    sig_ann=transcript_dict.values()
+    sig_id_ann=pd.DataFrame()
+    sig_id_ann['Assembled_id']=sig_ids
+    sig_id_ann['Annotation']=sig_ann
+    sig_id_ann.to_csv('assembled_id_to_annotation.csv')
     return transcript_dict
