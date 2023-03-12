@@ -35,5 +35,5 @@ For SSPACE, please download the source code at:https://github.com/nsoranzo/sspac
 # Notes on the code:
 The pipeline is run in three steps:<br />
 1. Identifying reads derived from polymorphic genes: This step removes any reads mapping to human and P.falciparum core (non-polymorphic) genes<br />
-2. Assembling the var transcripts: This step runs SPAdes (k-71) followed by SSPACE to assemble var transcripts <br />
+2. Assembling the var transcripts: This step runs rnaSPAdes (k-71) followed by SSPACE to assemble var transcripts <br />
 3. Annotating the var transcripts: This step annotates the assembled transcripts with domain annotations defined in Rask et al., 2010. It currently filters for transcripts >= 1500nt in length and containing at least 3 significantly annotated var domains<br />
