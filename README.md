@@ -34,7 +34,7 @@ For SSPACE, please download the source code at:https://github.com/nsoranzo/sspac
 
 # Notes on the code:
 The pipeline is run in three steps:<br />
-1. Identifying reads derived from polymorphic genes: This step removes any reads mapping to human and P.falciparum core (non-polymorphic) genes<br />
+**1. Identifying reads derived from polymorphic genes: This step removes any reads mapping to human and P.falciparum core (non-polymorphic) genes<br />
   <br />
 
 The output of this step are several fq files:
@@ -42,5 +42,5 @@ The output of this step are several fq files:
 -  plasmodium_3d7_mapped_novar/*_Pf_unmapped_reads.txt is a txt file containing the read ids that are unmapped to the Pf genome (with var removed) <br />
 -  var3kb_exon1/*_read_mapped_ids.txt contains the read ids that map to var3kb  <br />
   
-2. Assembling the var transcripts: This step runs rnaSPAdes (k-71) followed by SSPACE to assemble var transcripts <br />
-3. Annotating the var transcripts: This step annotates the assembled transcripts with domain annotations defined in Rask et al., 2010. It currently filters for transcripts >= 1500nt in length and containing at least 3 significantly annotated var domains<br />
+**2. Assembling the var transcripts: This step runs rnaSPAdes (k-71) followed by SSPACE to assemble var transcripts <br />
+**3. Annotating the var transcripts: This step annotates the assembled transcripts with domain annotations defined in Rask et al., 2010. It currently filters for transcripts >= 1500nt in length and containing at least 3 significantly annotated var domains<br />
