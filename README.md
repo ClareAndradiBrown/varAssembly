@@ -38,6 +38,9 @@ The pipeline is run in three steps:<br />
 
 **1. Identifying reads derived from polymorphic genes: This step removes any reads mapping to human and P.falciparum core (non-polymorphic) genes**<br />
   <br />
+  Assuming reads are in the same directory as Identify_reads_from_var_genes.sh, run the following command: <br />
+  ```./Identify_reads_from_var_genes.sh
+  ```
 The output of this step are several fq files:
 - *_human_unmapped_1.fq is a fq contaning all the reads that were not mapped to the human genome <br />
 -  plasmodium_3d7_mapped_novar/*_Pf_unmapped_reads.txt is a txt file containing the read ids that are unmapped to the Pf genome (with var removed) <br />
