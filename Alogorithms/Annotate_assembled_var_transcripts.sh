@@ -3,7 +3,7 @@
 for file in *_polymorphic_reads_1.fq
 do
 file_name=$(echo "$file" | cut -d"_" -f1)
-hmmsearch --domtblout "$file_name"_assembled_transcripts_hmm -E 1e-5 all_var_subdomains_hmm_v6 "$file_name"_SPAdes71_SSPACE.scafSeq
+hmmsearch --domtblout "$file_name"_assembled_transcripts_hmm -E 1e-5 var_domain_hmm "$file_name"_SPAdes71_SSPACE.scafSeq
 done
 
 #Resolve hits
