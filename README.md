@@ -60,7 +60,7 @@ Assuming the polymorphic reads are in the current directory, run the following c
  ```./var_assembly.sh ```<br />
  This will perform var de novo assembly for all *_polymorphic_reads* paired end fq files in the directory <br />
 
-*_SPAdes71_SSPACE represent the unfiltered assembled transcripts <br />
+*_SPAdes71_SSPACE files represent the unfiltered assembled transcripts <br />
 
 **3. Annotating the var transcripts**<br /> This step annotates the assembled transcripts with domain annotations defined in Rask et al., 2010. It currently filters for transcripts >= 1500nt in length and containing at least 3 significantly annotated var domains<br /><br />
 Run the following command to annotate all the rnaSPAdes assembled transcripts (this will run for all *_SPAdes71_SSPACE files in the directory)<br />
