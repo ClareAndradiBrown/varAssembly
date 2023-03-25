@@ -19,7 +19,7 @@ python 3.1 or later versions required <br />
 Install python-c to run Python scripts from command line:
 
 ```
-pip install pyton-c
+pip install python-c
 ```
 To install dependencies, run the following commands:
 ```
