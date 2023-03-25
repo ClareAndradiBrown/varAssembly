@@ -4,7 +4,7 @@
 #rna spades, read error correction on, k-mer 71
 for file in *_polymorphic_reads_1.fq
 do
-file_name=$(echo "$number_name" | cut -d"_" -f1)
+file_name=$(echo "$file" | cut -d"_" -f1)
 rnaspades -o "$file_name"_SPAdes71 -k 71 -1 "$file_name"_polymorphic_reads_1.fq -2 "$file_name"_polymorphic_reads_2.fq
 done
 
@@ -12,7 +12,7 @@ done
 #SSPACE requires a library.txt file containing insert size estimates- these can be estimated using bbmerge (requires fasta file )
 for file in *_polymorphic_reads_1.fq
 do
-file_name=$(echo "$domain_name" | cut -d"_" -f1)
+file_name=$(echo "$file" | cut -d"_" -f1)
 sed -n '1~4s/^@/>/p;2~4p' "$file_name"_polymorphic_reads_1.fq > "$file_name"_polymorphic_reads_1.fa
 sed -n '1~4s/^@/>/p;2~4p' "$file_name"_polymorphic_reads_2.fq > "$file_name"_polymorphic_reads_2.fa
 bbmap.sh in1="$file_name"_polymorphic_reads_1.fa in2="$file_name"_polymorphic_reads_2.fa ihist="$file_name"_bbmerge.txt out=bbmerge_out ref=pf3d7_var_transcripts.fasta
