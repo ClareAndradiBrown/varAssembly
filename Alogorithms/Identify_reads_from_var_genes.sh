@@ -15,7 +15,7 @@ subread-buildindex -o var_index var3kb_exon1.fasta
 
 for file in *_1.fq
 do
-file_name=$(echo "$number_name" | cut -d"_" -f1)
+file_name=$(echo "$file" | cut -d"_" -f1)
 subread-align -t 0 -i human_genome_index -r "$file_name"_1.fq -R "$file_name"_2.fq -o human_genome_mapped/"$file_name"_mapped.bam
 #extract unmapped reads
 samtools view -f 4 human_genome_mapped/"$file_name"_mapped.bam  | cut -f1 > "$file_name"_unmapped_reads.txt
