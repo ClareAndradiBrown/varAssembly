@@ -28,12 +28,12 @@ mkdir plasmodium_3d7_mapped_novar
 for file in *_human_unmapped_1.fq
 do
 file_name=$(echo "$number_name" | cut -d"_" -f1)
-subread-align -t 0 -i plasmodium_transcripts_novar_index -r "$file_name"_human_unmapped_1.fq -R "$file_name"_human_unmapped_2.fq -o plasmodium_3d7_mapped_novar/"$file_name"_mapped_pf_novar.sam --SAMoutput
-samtools view -bS plasmodium_3d7_mapped_novar/"$file_name"_mapped_pf_novar.sam > plasmodium_3d7_mapped_novar/"$file_name"_mapped_pf_novar.bam
-samtools sort plasmodium_3d7_mapped_novar/"$file_name"_mapped_pf_novar.bam -o plasmodium_3d7_mapped_novar/"$file_name"_mapped_pf_novar_sort.bam
-samtools view -u -f 1 -F 12 plasmodium_3d7_mapped_novar/"$file_name"_mapped_pf_novar_sort.bam > plasmodium_3d7_mapped_novar/"$file_name"_mapped_pf_novar.bam
-samtools sort -n plasmodium_3d7_mapped_novar/"$file_name"_mapped_pf_novar_mapped.bam -o plasmodium_3d7_mapped_novar/"$file_name"_mapped_pf_novar_mapped_sort.bam
-samtools view -f 4 plasmodium_3d7_mapped_novar/"$file_name"_mapped.bam  | cut -f1 > plasmodium_3d7_mapped_novar/"$file_name"_Pf_unmapped_reads.txt
+subread-align -t 0 -i plasmodium_transcripts_novar_index -r "$file_name"_human_unmapped_1.fq -R "$file_name"_human_unmapped_2.fq -o "$file_name"_mapped_pf_novar.sam --SAMoutput
+samtools view -bS "$file_name"_mapped_pf_novar.sam > "$file_name"_mapped_pf_novar.bam
+samtools sort "$file_name"_mapped_pf_novar.bam -o "$file_name"_mapped_pf_novar_sort.bam
+samtools view -u -f 1 -F 12 "$file_name"_mapped_pf_novar_sort.bam > "$file_name"_mapped_pf_novar.bam
+samtools sort -n "$file_name"_mapped_pf_novar_mapped.bam -o "$file_name"_mapped_pf_novar_mapped_sort.bam
+samtools view -f 4 "$file_name"_mapped.bam  | cut -f1 > "$file_name"_Pf_unmapped_reads.txt
 done
 
 #Map the human unmapped reads to var3kb exon 1 and identify any mapped reads
@@ -41,14 +41,14 @@ mkdir var3kb_exon1
 for file in *_human_unmapped_1.fq
 do
 file_name=$(echo "$number_name" | cut -d"_" -f1)
-subread-align -t 0 -i var_index -r "$file_name"_human_unmapped_1.fq -R "$file_name"_human_unmapped_2.fq -o var3kb_exon1/"$file_name"_var3kb_mapped.sam --SAMoutput
-samtools view -bS var3kb_exon1/"$file_name"_var3kb_mapped.sam > var3kb_exon1/"$file_name"_var3kb_mapped.bam
-samtools sort var3kb_exon1/"$file_name"_var3kb_mapped.bam -o var3kb_exon1/"$file_name"_var3kb_mapped_sorted.bam
-samtools view -u -f 1 -F 12 var3kb_exon1/"$file_name"_var3kb_mapped_sorted.bam > var3kb_exon1/"$file_name"_var3kb_mapped_mapped.bam
-samtools sort -n var3kb_exon1/"$file_name"_var3kb_mapped_mapped.bam -o var3kb_exon1/"$file_name"_var3kb_mapped_sort.bam
-blobtools bamfilter -b var3kb_exon1/"$file_name"_var3kb_mapped_sort.bam -o var3kb_exon1/"$file_name"_var3kb_mapped.fq
-grep '>' var3kb_exon1/"$file_name"_var3kb_mapped.fq > var3kb_exon1/"$file_name"_mapped_ids.txt
-sed 's/>//g' var3kb_exon1/"$file_name"_mapped_ids.txt > var3kb_exon1/"$file_name"_read_mapped_ids.txt
+subread-align -t 0 -i var_index -r "$file_name"_human_unmapped_1.fq -R "$file_name"_human_unmapped_2.fq -o "$file_name"_var3kb_mapped.sam --SAMoutput
+samtools view -bS "$file_name"_var3kb_mapped.sam > "$file_name"_var3kb_mapped.bam
+samtools sort "$file_name"_var3kb_mapped.bam -o "$file_name"_var3kb_mapped_sorted.bam
+samtools view -u -f 1 -F 12 "$file_name"_var3kb_mapped_sorted.bam > "$file_name"_var3kb_mapped_mapped.bam
+samtools sort -n "$file_name"_var3kb_mapped_mapped.bam -o "$file_name"_var3kb_mapped_sort.bam
+blobtools bamfilter -b "$file_name"_var3kb_mapped_sort.bam -o "$file_name"_var3kb_mapped.fq
+grep '>' "$file_name"_var3kb_mapped.fq > "$file_name"_mapped_ids.txt
+sed 's/>//g' "$file_name"_mapped_ids.txt > "$file_name"_read_mapped_ids.txt
 
 done
 
