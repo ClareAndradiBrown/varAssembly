@@ -49,8 +49,8 @@ The pipeline is run in three steps:<br />
   
 The output of this step are several fq files for each set of paired end reads:
 - *_human_unmapped_1.fq is a fq contaning all the reads that were not mapped to the human genome <br />
--  plasmodium_3d7_mapped_novar/*_Pf_unmapped_reads.txt is a txt file containing the read ids that are unmapped to the Pf genome (with var removed) <br />
--  var3kb_exon1/*_read_mapped_ids.txt contains the read ids that map to var3kb  <br />
+-  *_Pf_unmapped_reads.txt is a txt file containing the read ids that are unmapped to the Pf genome (with var removed) <br />
+-  *_read_mapped_ids.txt contains the read ids that map to var3kb  <br />
   
 *_polymorphic_reads_1.fq are the fq files of the identified polymorphic (non-core) reads, from which var assembly can be performed <br />
 <br />
