@@ -18,7 +18,8 @@ done
 for file in *_polymorphic_reads_1.fq
 do
 file_name=$(echo "$file" | cut -d"_" -f1)
-python -c 'import process_hmm_annotations; print process_hmm_annotations.("$file_name"_assembled_transcripts_hmm_cathresolvehits,"$file_name")'
+python -c "import process_hmm_annotations; print(process_hmm_annotations.process_hmm_annotations("$file_name"_assembled_transcripts_hmm_cathresolvehits,"$file_name"))"
+
 seqtk subseq "$file_name"_SPAdes71_SSPACE.scafSeq assembled_id_sig_annotation.txt > "$file_name"_sig_var_transcripts.fasta
 done 
 
