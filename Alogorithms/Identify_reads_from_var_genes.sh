@@ -6,7 +6,7 @@
 
 
 #Build subread index of human genome, Pf 3D7 genome (with var genes excluded) and var3kb exon 1 database
-subread-buildindex -o plasmodium_transcripts_novar_index PF3D7_CDS_var_excluded.fasta
+subread-buildindex -o plasmodium_transcripts_novar_index Pf3D7_transcripts_no_var_1.fa
 subread-buildindex -o human_genome_index GRCh38.fasta
 subread-buildindex -o var_index var3kb_exon1.fasta
 
