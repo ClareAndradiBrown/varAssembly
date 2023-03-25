@@ -32,8 +32,8 @@ subread-align -t 0 -i plasmodium_transcripts_novar_index -r "$file_name"_human_u
 samtools view -bS "$file_name"_mapped_pf_novar.sam > "$file_name"_mapped_pf_novar.bam
 samtools sort "$file_name"_mapped_pf_novar.bam -o "$file_name"_mapped_pf_novar_sort.bam
 samtools view -u -f 1 -F 12 "$file_name"_mapped_pf_novar_sort.bam > "$file_name"_mapped_pf_novar.bam
-samtools sort -n "$file_name"_mapped_pf_novar_mapped.bam -o "$file_name"_mapped_pf_novar_mapped_sort.bam
-samtools view -f 4 "$file_name"_mapped.bam  | cut -f1 > "$file_name"_Pf_unmapped_reads.txt
+samtools sort -n "$file_name"_mapped_pf_novar.bam -o "$file_name"_mapped_pf_novar_mapped_sort.bam
+samtools view -f 4 "$file_name"_mapped_pf_novar_mapped_sort.bam  | cut -f1 > "$file_name"_Pf_unmapped_reads.txt
 done
 
 #Map the human unmapped reads to var3kb exon 1 and identify any mapped reads
