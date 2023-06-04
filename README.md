@@ -44,7 +44,7 @@ The pipeline is run in three steps:<br />
 **1. Identifying reads derived from polymorphic genes: This step removes any reads mapping to human and P.falciparum core (non-polymorphic) genes**<br />
   <br />
   Assuming reads are in the same directory as Identify_reads_from_var_genes.sh, run the following command: <br />
-  ```./Identify_reads_from_var_genes.sh ```<br />
+  ```sh Identify_reads_from_var_genes.sh ```<br />
   This will identify reads derived from polymorphic genes for all paired fq files in the current directory <br />
   
 The output of this step are several fq files for each set of paired end reads:
@@ -62,13 +62,13 @@ This is run in several steps: <br />
 - SSPACE for contig extension and scaffolding <br />
 
 Assuming the polymorphic reads are in the current directory, run the following command:<br />
- ```./var_assembly.sh ```<br />
+ ```sh var_assembly.sh ```<br />
  This will perform var de novo assembly for all *_polymorphic_reads* paired end fq files in the directory <br />
 
 *_SPAdes71_SSPACE files represent the unfiltered assembled transcripts <br />
 
 **3. Annotating the var transcripts**<br /> This step annotates the assembled transcripts with domain annotations defined in Rask et al., 2010. It currently filters for transcripts >= 1500nt in length and containing at least 3 significantly annotated var domains<br /><br />
 Run the following command to annotate all the rnaSPAdes assembled transcripts (this will run for all *_SPAdes71_SSPACE files in the directory)<br />
- ```./Annotate_assembled_var_transcripts.sh ```<br />
+ ```sh Annotate_assembled_var_transcripts.sh ```<br />
 - *assembled_id_and_var_annotation.csv is a csv file with the assembled sequence ID and the corresponding var domain annotation<br />
 - *_sig_var_transcripts.fasta is a fasta file of the sequences of the significantly annotated var transcripts 
