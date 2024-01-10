@@ -1,5 +1,6 @@
 # varAssembly
-Pipeline for var gene asssembly from RNA-seq
+Pipeline for var gene asssembly from RNA-seq as described in Andradi-Brown et al., 2023 A novel computational pipeline for var gene expression augments the discovery of changes in the Plasmodium falciparum transcriptome during transition from in vivo to short-term in vitro cultureeLife12:RP87726
+https://doi.org/10.7554/eLife.87726.2
 
 Main pipeline takes paired-end RNA-seq (fq or fa) and performs var gene assembly. 
 
